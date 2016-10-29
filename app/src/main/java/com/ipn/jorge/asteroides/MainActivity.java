@@ -1,12 +1,15 @@
 package com.ipn.jorge.asteroides;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +40,21 @@ public class MainActivity extends AppCompatActivity {
         Intent i= new Intent(this, Preferencias.class);
         startActivity(i);
     }
+
+    public void mostrarPreferencias(View view){
+
+        SharedPreferences pref =
+                PreferenceManager.getDefaultSharedPreferences(this);
+        String s = " Música: "+ pref.getBoolean("musica",true)
+                +"\n Gráficos: " + pref.getString("graficos","?")
+                +"\n Fragmentos: " + pref.getString("fragmentos","?")
+                +"\n Multiplayer: " + pref.getBoolean("multiplayer", false)
+                +"\n NumJugadores: " + pref.getString("numJugadores","?")
+                +"\n Conexion: " + pref.getString("conexion","?");
+        Toast.makeText(this, s, Toast.LENGTH_LONG).show();
+    }
+
+
 
     /*
     *

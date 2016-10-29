@@ -23,7 +23,9 @@
         android:id="@+id/Button01"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="@string/Arrancar"/>
+        android:text="@string/Arrancar"
+        android:onClick="mostrarPreferencias"
+        />
     <Button
         android:id="@+id/Button02"
         android:layout_height="wrap_content"
