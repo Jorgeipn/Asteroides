@@ -20,16 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnSalir = (Button) findViewById(R.id.Button04);
-        btnSalir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
-
 
     }
+
+    public static AlmacenPuntuaciones almacen = new AlmacenPuntuacionesArray();
+
 
     public void lanzarAcercaDe(View view){
         Intent i= new Intent(this, AcercaDe.class);
@@ -54,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, s, Toast.LENGTH_LONG).show();
     }
 
+
+    public void lanzarPuntuaciones(View view) {
+        Intent i = new Intent(this, Puntuaciones.class);
+        startActivity(i);
+    }
 
 
     /*

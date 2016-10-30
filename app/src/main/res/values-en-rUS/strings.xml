@@ -6,4 +6,5 @@
 <string name="Configurar">CONFIGURATION</string>
 <string name="Acercade">ABOUT OF</string>
 <string name="Salir">EXIT</string>
+    <string name="verPuntuacion">PUNTUACIONES</string>
 </resources>

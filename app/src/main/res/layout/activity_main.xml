@@ -43,7 +43,9 @@
         android:id="@+id/Button04"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:text="@string/Salir"/>
+        android:text="@string/verPuntuacion"
+        android:onClick="lanzarPuntuaciones"
+        />
 
 
 </LinearLayout>
